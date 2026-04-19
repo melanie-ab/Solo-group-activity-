@@ -1,0 +1,12 @@
+Discuss your thoughts on the following questions:
+-------------------------------------------------------------------------------------------------------------------
+1.) Concisely speaking, what does this code do?
+2.) What are the types of urls, requests, results, f1, and f2? (You can use the :type directive in the REPL.)
+3.) What role does the Future.sequence method play?
+4.) How many elements does f2 contain (when viewed as a container, regardless of the specific values contained)?
+5.) How do the results of running c.printProgress() and c.printResults() change over time?
+6.) What else did you find noteworthy or worth wondering about?
+----------------------------------------------------------------------------------------------------------------------
+
+~~~~Answers~~~~
+1.) 
