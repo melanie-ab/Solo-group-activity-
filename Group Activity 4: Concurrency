@@ -9,4 +9,33 @@ Discuss your thoughts on the following questions:
 ----------------------------------------------------------------------------------------------------------------------
 
 ~~~~Answers~~~~
-1.) 
+1.) The program creates a WebServiceClient that will send many HTTP requests to different URL's concurrently by using the Scala Futures. 
+    It will them track how many request have completed and collects their results.
+    By printing the progress and the results over time.
+2.)The types are:
+    - urls: Seq[String]
+    - requests: Seq[Future[Try[Int]]]
+    - results: Future[Seq[Try[Int]]]
+    - f1: Future[Seq[Try[Int]]]
+    - f2: Future[Seq[Try[Int]]]
+3.) Future,sequence method converts the seq[Future[T]] into the Future[Seq[T]].
+    And it does this because it lets you wait for all the sequences to finish together. 
+    Which makes it clean which helps when collecting data.
+4.) Element f2 contains 108 elements. Each of the URL produces one result  So the size of f2 is the URL amount. 
+5.)For printProgress() the number will continue to increase over time. 
+    Since it represent how many operation have completed. 
+    While printResults() will reult with all Success or Failuure values since it fills the results.
+6.) Something that I thought was intresting is that while the results are running at the same time. 
+    The results dont show up in order. Instead it is all mixed. 
+    I also found it intrestin that printProgress(( changes even if the results arent ready.
+
+
+
+
+
+---------------------------------------------------------------------------------------------------
+Presenting notes: The program uses Scala Futures to send many web requests at the same time. 
+I used Future.sequence to combine all the asynchronous operations into one result. 
+As the program runs, printProgress shows how many requests are completed.
+while the PrintResults shows the partial and the final results. 
+I also noticed that some requests fail
